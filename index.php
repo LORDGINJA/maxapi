@@ -6,9 +6,9 @@
 	session_start();
 
 	//Make Constants using define
-	define('client_id', );
-	define('client_secret', );
-	define('redirectURI', );
+	define('client_ID', '025e77c43f93484fb23e475d3530c15c');
+	define('client_Secret', '952be6ecb7d941f89de536e5fdd9d75e');
+	define('redirectURI', 'http://localhost/maxapi/index.php');
 	define('ImageDirectory', 'pics/');
 
 ?>
