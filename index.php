@@ -11,6 +11,17 @@
 	define('redirectURI', 'http://localhost/maxapi/index.php');
 	define('ImageDirectory', 'pics/');
 
+
+	if (isset($_GET['code'])) {
+		$code = ($_GET['code']);
+		$url = 'https://api.instagram.com/oauth/access_token';
+		$access_token_settings = array('client_id' => clientID,
+									   	'client_secret' => clientSecret,
+										'grant_type' => 'authorization_code',
+										'redirect_uri' => redirectURI, 
+										'code' => $code);
+	}
+
 ?>
 
 <!DOCTYPE html>
