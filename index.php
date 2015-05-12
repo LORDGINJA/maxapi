@@ -32,10 +32,18 @@
 		//verifies that the curl is really there
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
+		//stores above information
+		$result = curl_exec($curl);
+		curl_close();
+		//decodes information in $result
+		$results = json_decode($result, true);
+		//echoes the decoded information 
+		echo $results['user']['username'];
 	}
 
-	$result = curl_exec($curl);
-	curl_close();
+	else{
+
+	}
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +60,7 @@
 		<!-- Creating a login for people to go and give approval for our web app to access their Instagram Account
 			 After getting aprroval we are now going to have the information so that we can play with it.
 		 -->
-		<a href="https:api.instagram.com/oauth/authorize/?client_id = <?php echo clientID; ?> & redirect_uri = <?php echo redirectURI; ?> & response_type=code">LOGIN</a>
+		<a href="https://api.instagram.com/oauth/authorize/?client_id = <?php echo clientID; ?> & redirect_uri = <?php echo redirectURI; ?> & response_type=code">LOGIN</a>
 		<script src="js/main.js"></script>
 	</body>
 </html>
