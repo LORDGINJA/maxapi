@@ -20,8 +20,22 @@
 										'grant_type' => 'authorization_code',
 										'redirect_uri' => redirectURI, 
 										'code' => $code);
+
+		//cURL is a library that calls to other API's
+		//setting curl session and insert $url
+		$curl = curl_init($url);
+		curl_setopt($curl, CURLOPT_POST, true);
+		//sets the POSTFIELDS to the array
+		curl_setopt($curl, CURLOPT_POSTFIELDS, $access_token_settings);
+		//sets equal to 1
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		//verifies that the curl is really there
+		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
 	}
 
+	$result = curl_exec($curl);
+	curl_close();
 ?>
 
 <!DOCTYPE html>
