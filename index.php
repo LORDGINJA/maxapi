@@ -27,12 +27,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<!-- <meta charset="utf-8">
 		<meta name="description" content="">
-		<meta name="viewport" content="width098, intitial-scale = 1">
+		<meta name="viewport" content="width098, intitial-scale = 1"> -->
 		<title>InstApi</title>
-		<meta rel="stylesheet" href="css/style.css">
-		<meta rel="author" href="humans.txt">
+		<!-- <meta rel="stylesheet" href="css/style.css">
+		<meta rel="author" href="humans.txt"> -->
 	</head>
 	<body>
 		<!-- Creating a login for people to go and give approval for our web app to access their Instagram Account
