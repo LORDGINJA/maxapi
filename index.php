@@ -26,6 +26,14 @@
 		return $result;
 	}
 
+	//gets user id
+	function getUserId($ch){
+		$url = 'http://api.instagram.com/users/search?q=' . $suerName . '&client_id=' . clientID;
+		$instagramInfo=connectToInstagram($url);
+
+		echo $results['data']['0']['id'];
+	}
+
 	if (isset($_GET['code'])) {
 		$code = ($_GET['code']);
 		$url = 'https://api.instagram.com/oauth/access_token';
@@ -52,7 +60,7 @@
 		//decodes information in $result
 		$results = json_decode($result, true);
 		//echoes the decoded information 
-		echo $results['user']['username'];
+		getUserId($results['user']['username']);
 	}
 
 	else{
