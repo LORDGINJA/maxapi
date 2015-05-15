@@ -43,17 +43,18 @@
 		foreach ($results['data'] as $items) {
 			//gives url for each picture in results
 			$image_url = $items['images']['low_resolution']['url'];
-			echo '<img src="' . $image_url . '"/><br>';
+			require_once(__DIR__ ."/carousel.php");
 			//saves $img_url
 			savePictures($image_url);
 		}
 	}
 
+
 	function savePictures($image_url){
-		echo $image_url . '<br>';
+		//echo $image_url . '<br>';
 		//using php to store the emage uro in the variable $filename
 		$filename = basename($image_url);
-		echo $filename . '<br>';
+		//echo $filename . '<br>';
 		//makes sure that the image isnt stored in the server
 		$destination = ImageDirectory . $filename;
 		//stores image file into server
@@ -94,24 +95,61 @@
 
 	else{
 
-	}
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- <meta charset="utf-8">
-		<meta name="description" content="">
-		<meta name="viewport" content="width098, intitial-scale = 1"> -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link type="text/css" rel="stylesheet"  href="css/bootstrap.css.map">
+		<link type="text/css" rel="stylesheet"  href="css/bootstrap.css">
+		<link type="text/css" rel="stylesheet"  href="css/bootstrap-theme.css">
+		<link type="text/css" rel="stylesheet"  href="css/bootstrap-theme.css.map">
+		<link type="text/css" rel="stylesheet"  href="css/main.css">
+		<meta charset="utf-8">
 		<title>InstApi</title>
-		<!-- <meta rel="stylesheet" href="css/style.css">
-		<meta rel="author" href="humans.txt"> -->
 	</head>
 	<body>
-		<!-- Creating a login for people to go and give approval for our web app to access their Instagram Account
-			 After getting aprroval we are now going to have the information so that we can play with it.
-		 -->
-		<div><a href="https://api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">LOGIN</a></div>
-		<!-- <script src="js/main.js"></script> -->
+		<div >
+			<img src="/maxapi/images/photo.jpg"  class="img-circle">
+		</div>
+		<header>
+			@LAMBADOODLE
+		</header>
+		<div class="main-navigation">
+			<nav class="horizontal-nav primary-wrapper" role='navigation'>
+				<ul>
+					<!-- <div class="btn-group">
+					  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+					    Music <span class="caret"></span>
+					  </button>
+						  <ul class="dropdown-menu" id="music" role="menu">
+							  <embed src="audio//cottoneyedjoe.mp3" width="300" height="70" autostart="true" loop="true"></embed>
+						  </ul>
+					</div> -->
+					<!-- <div class="btn-group">
+
+					  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+					    Projects <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					  <a href="3pgwebsite.html">3 Page Website</a>
+					  <a href="projects.html">Cookie Clicker</a>
+					  </ul>
+					</div> -->
+					<a href="https://api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">LOGIN</a>
+
+			       <!--  <li><a href="ThingsILike.html">asddfasfgfg</a></li> -->
+				</ul>
+			</nav>
+		</div>	
 	</body>
+	<script src="js/main.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </html>
+
+<?php
+	}
+?>
