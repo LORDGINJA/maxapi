@@ -39,14 +39,7 @@
 		$url = 'https://api.instagram.com/v1/users/' . $userID . '/media/recent?client_id=' . clientID . '&count=5';
 		$instagramInfo = connectToInstagram($url);
 		$results = json_decode($instagramInfo, true);
-		//parse through the info
-		foreach ($results['data'] as $items) {
-			//gives url for each picture in results
-			$image_url = $items['images']['low_resolution']['url'];
-			require_once(__DIR__ ."/carousel.php");
-			//saves $img_url
-			savePictures($image_url);
-		}
+		require_once(__DIR__ ."/carousel.php");	
 	}
 
 
@@ -119,29 +112,15 @@
 		</div>
 		<footer class="main-navigation">
 			<nav class="horizontal-nav primary-wrapper" role='navigation'>
-				<ul>
-					<!-- <div class="btn-group">
-					  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
-					    Music <span class="caret"></span>
-					  </button>
-						  <ul class="dropdown-menu" id="music" role="menu">
-							  <embed src="audio//cottoneyedjoe.mp3" width="300" height="70" autostart="true" loop="true"></embed>
-						  </ul>
-					</div> -->
-					<!-- <div class="btn-group">
-
-					  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
-					    Projects <span class="caret"></span>
-					  </button>
-					  <ul class="dropdown-menu" role="menu">
-					  <a href="3pgwebsite.html">3 Page Website</a>
-					  <a href="projects.html">Cookie Clicker</a>
-					  </ul>
-					</div> -->
+				<button type="button" class="btn btn-default btn-lg link">
+					<img src="/images/ins.png"><a href="index.php"></p> Register </a>
+				</button>
+				<div class="nav">
 					<a href="https://api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">LOGIN</a>
-
-			       <!--  <li><a href="ThingsILike.html">asddfasfgfg</a></li> -->
-				</ul>
+				</div>
+				<div class="footer">
+					Created by Maxwell
+				</div>
 			</nav>
 		</footer>	
 	</body>

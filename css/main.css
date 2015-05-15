@@ -1,6 +1,6 @@
 
 body{	
-	background-image: url(../images/viper.jpg);
+	background-image: url(../images/beach.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,7 +21,15 @@ header{
 nav{
   background-color: black;
   font-size: 20px;
-  height: auto;
+  height: 50px;
+  padding: auto;
+  margin: 2%; 
+}
+.nav{
+  display: inline-block;
+}
+.footer{
+  display: inline-block;
 }
 
 .carsel{
@@ -29,6 +37,22 @@ nav{
   display: block;
   text-align: center;
   height: 320px;
+}
+
+.circs{
+  margin-top: 10px;
+}
+
+.ig-b- { display: inline-block; }
+.ig-b- img { visibility: hidden; }
+.ig-b-:hover { background-position: 0 -60px; } 
+.ig-b-:active { background-position: 0 -120px; }
+.ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+.ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }
+
+.insta{
+  width: auto;
 }
 
 img{
@@ -132,202 +156,3 @@ img{
 	opacity: .9;
 }
 
-.header-banner-top .primary-wrapper {
-  margin: 0 auto;
-  max-width: 900px;
-}
-.header-banner-top .hidden {
-  display: none;
-}
-.header-banner-top .horizontal-nav {
-
-  top: 0;
-}
-.header-banner-top .horizontal-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 20px;
-}
-.header-banner-top .horizontal-nav li {
-  display: inline-block;
-}
-.header-banner-top .horizontal-nav a {
-  display: block;
-}
-.header-banner-top .horizontal-nav .folder {
-  position: relative;
-  cursor: pointer;
-}
-.header-banner-top .horizontal-nav .folder ul {
-  display: block;
-  position: absolute;
-  top: -9999px;
-  left: 0;
-  z-index: 999;
-}
-.header-banner-top .horizontal-nav .folder li {
-  display: block;
-}
-.header-banner-top .horizontal-nav .folder:hover ul {
-  top: 100%;
-}
-.header-banner-top .mobile-menu-box,
-.header-banner-top .mobile-menu-label {
-  display: none;
-}
-.header-banner-top .banner {
-  position: relative;
-}
-.header-banner-top .banner .banner-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.header-banner-top .banner .primary-wrapper {
-  position: relative;
-}
-@media screen and (max-width: 700px) {
-  .header-banner-top .horizontal-nav {
-    overflow: hidden;
-    height: 50px;
-  }
-  .header-banner-top .mobile-menu-box {
-    display: none;
-  }
-  .header-banner-top .mobile-menu-label {
-    display: block;
-    cursor: pointer;
-  }
-  .header-banner-top .mobile-menu-label:before {
-    content: 'Menu';
-  }
-  .header-banner-top .mobile-menu-box:checked ~ .horizontal-nav {
-    height: auto;
-  }
-  .header-banner-top .mobile-menu-box:checked ~ .mobile-menu-label:before {
-    content: 'Close';
-  }
-  .header-banner-top .horizontal-nav li {
-    display: block;
-  }
-  .header-banner-top .horizontal-nav .folder ul {
-    position: static;
-  }
-  .header-banner-top .horizontal-nav .folder-toggle-label a:before {
-    content: '+ ';
-  }
-  .header-banner-top .horizontal-nav .folder-toggle-box:checked ~ .folder-toggle-label a:before {
-    content: '- ';
-  }
-  .header-banner-top .horizontal-nav .folder:hover ul,
-  .header-banner-top .horizontal-nav .folder-toggle-box ~ ul {
-    display: none;
-  }
-  .header-banner-top .horizontal-nav .folder-toggle-box:checked ~ ul {
-    display: block;
-  }
-}
-.header-banner-top {
-  text-align: center;
-}
-.header-banner-top .main-navigation {
-  background: pink;
-}
-.header-banner-top .horizontal-nav a {
-  padding: 1.5em 1em;
-  color: #aaaaaa;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-.header-banner-top .horizontal-nav a:hover,
-.header-banner-top .horizontal-nav .active-link a {
-  color: #ffffff;
-}
-.header-banner-top .horizontal-nav .folder ul {
-  background-color: #222;
-  transition: padding 0.14s ease-out;
-  text-align: left;
-}
-.header-banner-top .horizontal-nav .folder a {
-  padding: 0.5em 1em;
-  white-space: nowrap;
-}
-.header-banner-top .horizontal-nav .folder:hover ul {
-  padding: 0.5em 0;
-}
-.header-banner-top .banner {
-  background-color: none;
-}
-.header-banner-top .banner .banner-image {
-  background: url() center center;
-  background-size: cover;
-  opacity: 0.5;
-}
-.header-banner-top .banner .primary-wrapper {
-  padding-top: 10px;
-  padding-bottom: 60px;
-}
-.header-banner-top .banner .site-title {
-  letter-spacing: 2px;
-  font-size: 52px;
-  margin: 0 0 20px;
-}
-.header-banner-top .banner .site-title a {
-  color: #fff;
-  text-decoration: none;
-}
-.header-banner-top .banner .site-tagline {
-  color: #aaa;
-  letter-spacing: 1px;
-  font-size: 14px;
-  margin: 0 20%;
-}
-@media screen and (max-width: 700px) {
-  .header-banner-top .horizontal-nav a {
-    padding: 0.75em 1em;
-  }
-  .header-banner-top .horizontal-nav > ul > li:first-child a {
-    padding-top: 2em;
-  }
-  .header-banner-top .horizontal-nav > ul > li:last-child a {
-    padding-bottom: 2em;
-  }
-  .header-banner-top .horizontal-nav li {
-    display: block;
-  }
-  .header-banner-top .horizontal-nav .folder ul {
-    text-align: center;
-    padding: 0.5em 0;
-    margin: 0.5em 0;
-    transition: none;
-    background-color: #292929;
-  }
-  .header-banner-top .horizontal-nav .folder:hover ul {
-    padding: 0.5em 0;
-  }
-  .header-banner-top .horizontal-nav .folder-toggle-label a {
-    cursor: pointer;
-  }
-  .header-banner-top .mobile-menu-label {
-    color: #ffffff;
-    background-color: #292929;
-    padding: 1.5em 1em;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 1px;
-  }
-  .header-banner-top .mobile-menu-box:checked ~ .mobile-menu-label {
-    color: #aaaaaa;
-  }
-  .header-banner-top .mobile-menu-box:checked ~ .horizontal-nav {
-    padding: 1em 0;
-  }
-  .header-banner-top .mobile-menu-box:checked ~ .mobile-menu-label:before {
-    content: 'Close';
-  }
-}
