@@ -25,10 +25,10 @@ nav{
 }
 
 .carsel{
-  background-color: white;
-  opacity: .5;
+  margin-bottom: 5px;
+  display: block;
   text-align: center;
-  height: auto;
+  height: 320px;
 }
 
 img{
