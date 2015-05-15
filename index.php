@@ -111,13 +111,13 @@
 		<title>InstApi</title>
 	</head>
 	<body>
-		<div >
-			<img src="/maxapi/images/photo.jpg"  class="img-circle">
-		</div>
 		<header>
 			@LAMBADOODLE
 		</header>
-		<div class="main-navigation">
+		<div >
+			<img src="/maxapi/images/photo.jpg"  class="img-circle">
+		</div>
+		<footer class="main-navigation">
 			<nav class="horizontal-nav primary-wrapper" role='navigation'>
 				<ul>
 					<!-- <div class="btn-group">
@@ -143,7 +143,7 @@
 			       <!--  <li><a href="ThingsILike.html">asddfasfgfg</a></li> -->
 				</ul>
 			</nav>
-		</div>	
+		</footer>	
 	</body>
 	<script src="js/main.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
