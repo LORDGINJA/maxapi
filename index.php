@@ -36,7 +36,7 @@
 
 	//prints images onto screen
 	function printImages($userID){
-		$url = 'https://api.instagram.com/v1/users/' . $userID . '/media/recent?client_id=' . clientID . '&count=5';
+		$url = 'https://api.instagram.com/v1/users/' . $userID . '/media/recent?client_id=' . clientID . '&count=13';
 		$instagramInfo = connectToInstagram($url);
 		$results = json_decode($instagramInfo, true);
 		require_once(__DIR__ ."/carousel.php");	
@@ -112,14 +112,12 @@
 		</div>
 		<footer class="main-navigation">
 			<nav class="horizontal-nav primary-wrapper" role='navigation'>
-				<button type="button" class="btn btn-default btn-lg link">
-					<img src="/images/ins.png"><a href="index.php"></p> Register </a>
-				</button>
+				<a href="http://instagram.com/lambadoodle?ref=badge"><img height="40px" width="70px" src="/maxapi/images/ins.png"> </a>
 				<div class="nav">
 					<a href="https://api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">LOGIN</a>
 				</div>
 				<div class="footer">
-					Created by Maxwell
+					Created by Maxwell Karp
 				</div>
 			</nav>
 		</footer>	
